@@ -63,10 +63,6 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(rnnoise)
 
-string(REPLACE "-Wl,--fatal-warnings" "" CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS}")
-string(REPLACE "-Wl,--fatal-warnings" "" CMAKE_MODULE_LINKER_FLAGS "${CMAKE_MODULE_LINKER_FLAGS}")
-string(REPLACE "-Wl,--fatal-warnings" "" CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS}")
-
 add_library(rnnoise4j SHARED
         src/rnnoise.c
         src/exceptions.c
